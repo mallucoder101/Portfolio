@@ -7,6 +7,11 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
 </head>
 
 <body>
@@ -46,7 +51,7 @@
         <img class="skill-card" src="photos/javascript.png" alt="...">
     </div>
     <hr>
-    <h3 class="work-header">Works</h3>
+    <h3 class="work-header" id="works">Works</h3>
     <div class="works">
         <h4>Websites : </h4>
         <div class="work-item">
@@ -67,7 +72,7 @@
             <img src="photos/Sooraj.jpg" alt="Work poster" class="poster-image2">
         </div>
     </div>
-    <div class="footer">
+    <div class="footer" id="contacts">
         <div class="socials">
             <a href="https://www.linkedin.com/in/sooraj-k-r-50213b32b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/soorajkr4209?igsh=cjZ3ZWNqNXltc25w" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -91,6 +96,17 @@
             video.pause();
             video.currentTime = 0;
         });
+    });
+    // Smooth scroll for navbar links
+    document.querySelectorAll('.navbar a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
     });
     </script>
 </body>
