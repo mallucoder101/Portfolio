@@ -233,7 +233,7 @@ select {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .navbar ul {
-        gap: 30px;
+        gap: 5px;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -269,15 +269,50 @@ select {
         padding: 40px 10vw;
         margin: 0;
         gap: 32px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
-
     .hero .image {
         justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 100%;
     }
+    .hero .content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-    .about {
-        padding: 40px 6vw;
-        max-width: 98vw;
+@media (max-width: 480px) {
+    .hero {
+        padding: 18px 2vw;
+        gap: 16px;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero .image img {
+        max-width: 80vw;
+        height: auto !important;
+        min-height: 120px;
+        border-radius: 50%;
+        margin-bottom: 0;
+    }
+    .hero .content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -507,7 +542,7 @@ select {
         width: 90vw;
         max-width: 320px;
         aspect-ratio: 4/5;
-        height: auto;
+        height: 95vw;
         max-height: none;
     }
 }
@@ -612,6 +647,8 @@ select {
     .footer {
         padding: 40px 20px;
         margin: 40px 20px;
+        text-align: center;
+        margin-left: 60px;
     }
     
     .socials {
@@ -746,12 +783,12 @@ img, video {
         max-height: 60vw;
     }
     .work-item {
-        height: 28vw;
+        height: 37vw;
         min-height: 80px;
         max-width: 98vw;
     }
     .posters {
-        height: 32vw;
+        height: 95vw;
         min-height: 80px;
         max-width: 98vw;
     }
