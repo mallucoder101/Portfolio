@@ -294,6 +294,9 @@ select {
     .navbar a:hover, .navbar a:active, .navbar a:focus {
         color: #22223B;
     }
+    body {
+        padding-bottom: 120px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -829,6 +832,9 @@ select {
     }
     h3 {
         font-size: 1.5rem;
+    }
+    body {
+        padding-bottom: 120px;
     }
 }
 
