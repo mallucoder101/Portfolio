@@ -137,6 +137,16 @@ p,
     justify-content: flex-end;
     align-items: center;
     position: relative;
+    min-height: 480px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* Floating animation for hero image */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0); }
 }
 
 .hero .image img {
@@ -149,6 +159,7 @@ p,
     border-radius: 50%;
     position: relative;
     z-index: 2;
+    animation: float 3.5s ease-in-out infinite;
 }
 
 .cta-btn {
@@ -340,6 +351,7 @@ select {
         margin-bottom: 0;
     }
     .hero .content {
+        padding: 35px;
         width: 100%;
         text-align: center;
         align-items: center;
@@ -706,18 +718,7 @@ select {
 
 @media (max-width: 360px) {
     .navbar {
-        flex-direction: row;
-        padding: 0;
-        max-width: 90vw;
-        border-radius: 35px;
-        margin: 15 auto 10px auto;
-        box-shadow: 0 2px 8px rgba(34,34,59,0.10);
-        overflow-x: hidden;
-        border: none;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background: #4A4E69ee;
+        display: none;
     }
     .navbar ul {
         gap: 10px;
@@ -768,7 +769,7 @@ select {
         min-height: 120px;
     }
     .about {
-        padding: 6px 1vw;
+        padding: 10px 4vw;
         max-width: 90vw;
         margin-bottom: 10px;
     }
@@ -861,5 +862,23 @@ img, video {
         min-height: 80px;
         max-width: 81vw;
     }
+}
+
+.work-info {
+    background: transparent;
+    text-align: center;
+    margin-top: 12px;
+}
+.work-info h5 {
+    font-size: 1.1rem;
+    color: #C9ADA7;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.work-info .cta-btn {
+    margin-top: 0;
+    padding: 7px 24px;
+    font-size: 1rem;
 }
 
